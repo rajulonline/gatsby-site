@@ -1,2 +1,5 @@
 #!/bin/bash
-cd server && node app
+cd server && npm install
+node app
+cd ../ && npm install
+npm start
