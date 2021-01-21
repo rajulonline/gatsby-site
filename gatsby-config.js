@@ -31,8 +31,7 @@ module.exports = {
       resolve: "gatsby-source-graphql",
       options: {
         typeName: "Movie",
-        fieldName: "movie",
-        url: "/graphql"
+        fieldName: "movie"        
       },
     },
   ],
