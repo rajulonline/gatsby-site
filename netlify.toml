@@ -1,5 +1,2 @@
 [build]
-  command = "cd server"
-  command = "node app"
-  command = "cd ../"
-  command = "npm start"
+  command = "./build.sh"
