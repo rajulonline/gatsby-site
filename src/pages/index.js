@@ -3,19 +3,19 @@ import Layout from "../components/layout"
 import SEO from "../components/seo"
 import { useStaticQuery, graphql } from "gatsby"
 
-
 const IndexPage = () => {
   const { movie } = useStaticQuery(
     graphql`
-      query MyQuery {
-        movie {
-          movieList {
-            title
-      rate
-      year
-          }
+    query MyQuery {
+      movie {
+        movieList { 
+          id     
+          rate
+          title
+          year
         }
       }
+    }    
     `
   )
   return (
@@ -23,7 +23,7 @@ const IndexPage = () => {
       <SEO title="Home" />
       <ul>
         {movie.movieList.map(mov => (
-          <li>
+          <li key={mov.id}>
             <div>{mov.title}({mov.year})</div>
             <div className="rate-row">
               <span className="rate-text">{mov.rate}</span>
