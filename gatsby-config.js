@@ -32,7 +32,7 @@ module.exports = {
       options: {
         typeName: "Movie",
         fieldName: "movie",
-        url: "http://localhost:4000/graphql"
+        url: "/graphql"
       },
     },
   ],
